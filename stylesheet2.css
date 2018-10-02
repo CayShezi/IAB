@@ -1,0 +1,48 @@
+.numRating {
+  display        : inline-block;
+  position       : absolute;
+  height         : 24px;
+  background     : url('icon_number_widget.png') no-repeat 0 0;
+  vertical-align : bottom;
+}
+ 
+.numRating div {
+  float    : left;
+  position : relative;
+  height   : 24px;
+}
+ 
+.numRating input {
+  position : relative;
+  z-index  : 1;
+  width    : 24px;
+  height   : 24px;
+  margin   : 0;
+  padding  : 0;
+  opacity  : 0;
+}
+ 
+.numRating label {
+  position : absolute;
+  top      : 0;
+  left     : 0;
+  width    : 100%;
+  height   : 24px;
+}
+ 
+.numRating span {
+  display : none;
+}
+ 
+.numRating       input:checked       + label,
+.numRating:hover input:checked:hover + label {
+  background : url('icon_number_widget.png') repeat-x 0 -24px;
+}
+ 
+.numRating:hover input:checked + label {
+  background : transparent;
+}
+ 
+.numRating:hover input:hover + label {
+  background : url('icon_number_widget.png') repeat-x 0 -48px;
+}
